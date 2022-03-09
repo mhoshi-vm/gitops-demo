@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: gitops-demo
   labels:
-    apps.tanzu.vmware.com/workload-type: web-demo
+    apps.tanzu.vmware.com/workload-type: web
     app.kubernetes.io/component: run
     carto.run/workload-name: gitops-demo
 spec:
@@ -23,7 +23,7 @@ spec:
         developer.conventions/target-containers: workload
       labels:
         app.kubernetes.io/component: run
-        apps.tanzu.vmware.com/workload-type: web-demo
+        apps.tanzu.vmware.com/workload-type: web
         carto.run/workload-name: gitops-demo
         conventions.apps.tanzu.vmware.com/framework: spring-boot
         tanzu.app.live.view: "true"
@@ -34,7 +34,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.show-details="always" -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include="*" -Dmanagement.server.port="8080" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: harbor.lespaulstudioplus.info/tap/supply-chain/gitops-demo-default@sha256:40b169051d6aab74e78c49234c3437a50765cfc9e9a284a5b3779e4ee06a9884
+        image: harbor.lespaulstudioplus.info/tap/supply-chain/gitops-demo-default@sha256:2d5506e276e9d4bbef2d23bb9f89ce1fa2d8c7d2f42807c466ff2100e8f00f92
         name: workload
         ports:
         - containerPort: 8080
