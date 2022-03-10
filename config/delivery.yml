@@ -34,7 +34,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.show-details="always" -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include="*" -Dmanagement.server.port="8080" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: harbor.lespaulstudioplus.info/tap/supply-chain/gitops-demo-default@sha256:2d5506e276e9d4bbef2d23bb9f89ce1fa2d8c7d2f42807c466ff2100e8f00f92
+        image: harbor.lespaulstudioplus.info/tap/supply-chain/gitops-demo-default@sha256:cf0a2fe4ed3e9c4aee9e930a8a4f56d6fdb2248b5a0c72bf5e7fc8fe3f1871d3
         name: workload
         ports:
         - containerPort: 8080
